@@ -10,6 +10,7 @@ const ExpensesMain = ({ data }) => {
             title={expense.title}
             price={expense.price}
             date={expense.date}
+            // key={expense.id}
           />
         );
       })}
