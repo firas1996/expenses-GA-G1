@@ -1,21 +1,12 @@
-import React from "react";
+import "./Chart.css";
 import ChartItem from "./ChartItem";
 
-const Chart = () => {
+const Chart = ({ data }) => {
   return (
-    <div>
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
-      <ChartItem />
+    <div className="chart">
+      {data.map((item) => {
+        return <ChartItem label={item.label} value={item.value} />;
+      })}
     </div>
   );
 };

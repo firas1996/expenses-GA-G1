@@ -1,12 +1,12 @@
-import React from "react";
+import "./ChartItem.css";
 
-const ChartItem = () => {
+const ChartItem = ({ label, value }) => {
   return (
-    <div>
-      <div>
-        <div></div>
+    <div className="chart-item">
+      <div className="chart-item__inner">
+        <div className="chart-item__fill"></div>
       </div>
-      <label>label</label>
+      <label className="chart-item__label">{label}</label>
     </div>
   );
 };
