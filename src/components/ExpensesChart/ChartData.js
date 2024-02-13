@@ -25,7 +25,7 @@ const ChartData = ({ expenses }) => {
     return a + b;
   });
   console.log(sum);
-  return <Chart data={data} />;
+  return <Chart data={data} max={max} sum={sum} />;
 };
 
 export default ChartData;
