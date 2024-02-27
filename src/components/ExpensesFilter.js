@@ -1,13 +1,13 @@
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = ({ years, setSelectedDate }) => {
+const ExpensesFilter = ({ years, setSelectedDate, selectedDate }) => {
   const changeHandler = (event) => {
     setSelectedDate(event.target.value);
   };
   return (
     <div className="expenses-filter expenses-filter__control">
       <label>Filter by year</label>
-      <select onChange={changeHandler}>
+      <select value={selectedDate} onChange={changeHandler}>
         {/* {years.map((item) => (
           <option value={item}>{item}</option>
         ))} */}
