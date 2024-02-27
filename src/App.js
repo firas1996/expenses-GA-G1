@@ -1,4 +1,5 @@
 import ExpensesMain from "./components/FirstContainer/ExpensesMain";
+import AddExpenses from "./components/Form/AddExpenses";
 
 function App() {
   const expensesData = [
@@ -29,6 +30,7 @@ function App() {
   ];
   return (
     <div>
+      <AddExpenses />
       <ExpensesMain data={expensesData} />
     </div>
   );

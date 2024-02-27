@@ -1,0 +1,30 @@
+import "./AddExpenses.css";
+
+const AddExpenses = () => {
+  return (
+    <div className="new-expense">
+      <form>
+        <div className="new-expense__controls">
+          <div className="new-expense__control">
+            <label>Title</label>
+            <input />
+          </div>
+          <div className="new-expense__control">
+            <label>Price</label>
+            <input />
+          </div>
+          <div className="new-expense__control">
+            <label>Date</label>
+            <input />
+          </div>
+        </div>
+        <div className="new-expense__actions">
+          <button>Cancel</button>
+          <button>Ajouter</button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default AddExpenses;
