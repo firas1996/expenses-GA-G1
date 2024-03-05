@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddExpenses.css";
-
-const AddExpenses = () => {
+let id = 5;
+const AddExpenses = ({ getData }) => {
   // const [title, setTitle] = useState("");
   // const [price, setPrice] = useState("");
   // const [date, setDate] = useState("");
@@ -32,7 +32,13 @@ const AddExpenses = () => {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(formInputs);
+    getData({
+      id: id,
+      title: formInputs.title,
+      price: +formInputs.price,
+      date: new Date(formInputs.date),
+    });
+    id++;
     setFormInputs({
       title: "",
       price: "",
