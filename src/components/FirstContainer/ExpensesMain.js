@@ -10,14 +10,12 @@ const ExpensesMain = ({ data }) => {
     "All",
     ...new Set(data.map((item) => item.date.getFullYear()).sort()),
   ];
-  // console.log(years);
   const [selectedDate, setSelectedDate] = useState(years[0]);
   const filtredData = data.filter((item) => {
     return selectedDate == "All"
       ? true
       : selectedDate == item.date.getFullYear();
   });
-  console.log(filtredData);
   return (
     <div className="main">
       <ExpensesFilter

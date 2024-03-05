@@ -31,7 +31,7 @@ function App() {
   ];
   const [allExpenses, setAllExpenses] = useState(expensesData);
   const getData = (data) => {
-    setAllExpenses([...allExpenses, data]);
+    setAllExpenses([data, ...allExpenses]);
   };
   return (
     <div>

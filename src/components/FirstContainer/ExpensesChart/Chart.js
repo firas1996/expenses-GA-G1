@@ -7,6 +7,7 @@ const Chart = ({ data, sum, max }) => {
       {data.map((item) => {
         return (
           <ChartItem
+            key={item.label}
             label={item.label}
             value={item.value}
             max={max}
